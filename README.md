@@ -17,7 +17,7 @@ Show daemon running on host.
 
 Notice how the image is downloaded automatically, layer by layer.
 
-`ps fe` will show the namespaced process tree inside the container (PID 1)
+`ps -fe` will show the namespaced process tree inside the container. How long do you expect the output to be?
 
 `docker exec -it $container /bin/bash` will open another shell in the same container.
 
@@ -31,6 +31,8 @@ What happens if I run `touch /tmp/new_file.txt`, exit the container and start a 
 
 `docker run elifesciences/hello` will run the default command of the image, which is a `cat` command.
 
+What do I have to do if I want to run this code on another laptop?
+
 ## 3. Users
 
 `docker run -it -u 33 elifesciences/hello /bin/bash` runs a shell for the `www-data` standard user, which is unprivileged.
@@ -39,7 +41,7 @@ What happens when I run `echo "IMPACT FACTOR" > message.txt`?
 
 ## 4. Volumes
 
-`docker run -it -v $(pwd):/code elifesciences/hello /bin/bash` will run a container where the current folder is mounted as a volume. Incidentally, it means the volume's content will persist beyond the lifetime of the container.
+`docker run -it -v $(pwd):/code elifesciences/hello /bin/bash` will run a container where the current folder is mounted as a volume. Incidentally, it also means the volume's content will persist beyond the lifetime of the container.
 
 `mount | grep /code` will show the mount point.
 
