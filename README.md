@@ -1,7 +1,7 @@
 ## 0. Setup
 
-[Docker CE for Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
-[Docker for Mac](https://docs.docker.com/docker-for-mac/install/)
+- [Docker CE for Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+- [Docker for Mac](https://docs.docker.com/docker-for-mac/install/)
 
 `docker -v` should return `Docker version 17.12.0-ce, ...`
 
