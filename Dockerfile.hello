@@ -1,0 +1,5 @@
+FROM ubuntu
+
+COPY message.txt /
+
+CMD /bin/bash -c 'cat /message.txt'
