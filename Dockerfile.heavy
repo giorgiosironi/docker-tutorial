@@ -1,0 +1,5 @@
+FROM ubuntu
+
+COPY before.txt /var
+RUN sleep 60
+COPY after.txt /var

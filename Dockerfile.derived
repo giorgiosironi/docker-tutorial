@@ -1,0 +1,9 @@
+FROM elifesciences/php_cli
+
+USER elife
+RUN mkdir /srv/hello
+WORKDIR /srv/hello
+COPY hello.php /srv/hello/
+
+USER www-data
+CMD ["php", "/srv/hello/hello.php"]
